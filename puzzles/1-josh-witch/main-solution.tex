@@ -3,30 +3,39 @@
 
 \phWorksheet{Solution - Main Puzzle 1}
 
-Since Grendel is equally close to the center of every cauldron used, these centers lay on a big circle with Grendel as the center. The distance to Grendel is minimized by making no gaps between any two cauldrons. As we use fewer and fewer cauldrons the radius of this ``big circle'' is minimized. This means using 3 cauldrons minimizes the distance from Grendel to a cauldron.
+The solution, \(2\sqrt3\) feet, is shown by the following diagram.
 
+\begin{center}
+\begin{tikzpicture}[x=0.3in,y=0.3in]
+  \draw[color=gray,very thin,fill=lightgray] (0,0) circle (3);
+  \draw[color=gray,very thin,fill=lightgray] (6,0) circle (3);
+  \draw[color=gray,very thin,fill=lightgray] ($(3,{3*sqrt(3)})$) circle (3);
+  \draw (0,0) -- (3,0) -- (6,0) -- ($(3,{3*sqrt(3)})$) -- (0,0);
+  \draw ($(3,{3/sqrt(3)})$) -- (0,0);
+  \draw ($(3,{3/sqrt(3)})$) -- (3,0);
+  \draw ($(3,{3/sqrt(3)})$) -- (6,0);
+  \draw ($(3,{3/sqrt(3)})$) -- ($(3,{3*sqrt(3)})$);
+  \draw ($(3,{3/sqrt(3)})$) -- ($(1.5,{1.5*sqrt(3)})$);
+  \draw ($(3,{3/sqrt(3)})$) -- ($(1.5,{1.5*sqrt(3)})+(3,0)$);
+  \node at (1.7,-0.4) {\small 3};
+  \node at (1.6,1.4) {\small \(2\sqrt{3}\)};
+  \node at (3.3,0.7) {\small \(\sqrt{3}\)};
+\end{tikzpicture}
+\end{center}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.5]{assets/josh/circles}
-\end{figure}
+Each small triangle is \(30\)-\(60\)-\(90\) as they were dissected from
+an equilateral \(60\)-\(60\)-\(60\) triangle. The appropriate side lengths
+are obtained by scaling the triangle given in the puzzle by a factor of
+\(\sqrt3\).
 
-To determine how close Grendel is in the circle to the right we note the triangle formed by connecting the three circle centers and note Grendel is equally close to them.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.5]{assets/josh/bigtri}
-\end{figure}
-
-The black lines are equal length and the red lines are equal length so we have 3 equivalent isosceles triangles within an equilateral triangle. So the three angles at the center all equal to one another and sum up to $360^o$. This means each of these angles is $120^o$.
-
-Now let's look at just the ``top two'' circle centers, as well as Grendel.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.5]{assets/josh/circletri}
-\end{figure}
-
-By drawing upward from Grendel we will cut the segment between the two circle centers in half. However, what we've really done is form a 30, 60, 90 triangle whose side opposite to the $60^o$ angle is 3. The hypotenuse of this triangle happens to be the distance we are trying to find so all we must do now is use the formula we were given at the start: $y = \frac{2}{\sqrt{3}}x$. (Where y is the hypotenuse and x is the side opposite to the $60^o$ angle)
-
-Plugging is 3 for x yields $y= \frac{6}{\sqrt{3}}=2\sqrt{3}$.
+\begin{center}
+\begin{tikzpicture}[x=1in,y=1in]
+  \draw (0,0) -- node[below] {\(\sqrt3\)}
+        (1,0) -- node[above right] {\(2\sqrt3\)}
+        ($(0,{sqrt(3)})$) -- node[left] {\(3\)}
+        (0,0);
+  \draw (0,0.1) -- (0.1,0.1) -- (0.1,0);
+  \node at (0.13, 1.25) {\small\(30^\circ\)};
+  \node at (0.8, 0.1) {\small\(60^\circ\)};
+\end{tikzpicture}
+\end{center}

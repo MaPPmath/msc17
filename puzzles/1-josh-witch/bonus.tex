@@ -3,4 +3,49 @@
 
 \phWorksheet{Bonus Puzzle 1}
 
-Grendel decided she's working too hard so she got her brooms to do the work for her. Grendel set up several brooms and cauldrons in her basement which is infinitely large. Every broom is equally close to 3 cauldrons and is $2{\sqrt{3}}$ feet away from them. How much surface area of the floor can the cauldrons cover in this way?
+Now Grendel has bewitched a broom to do the hard work of stirring her
+caudlrons for her, as shown below.
+
+\begin{center}
+\begin{tikzpicture}[x=0.3in,y=0.3in]
+  \draw[color=gray,very thin,fill=lightgray] (0,0) circle (3);
+  \draw[color=gray,very thin,fill=lightgray] (6,0) circle (3);
+  \draw[color=gray,very thin,fill=lightgray] ($(3,{3*sqrt(3)})$) circle (3);
+  \draw (0,0) -- ($(3,{3/sqrt(3)})$) -- (3,0) -- (0,0);
+  \node at (1.7,-0.4) {\small 3};
+  \node at (1.6,1.4) {\small \(2\sqrt{3}\)};
+  \node at (3.3,0.7) {\small \(\sqrt{3}\)};
+  \draw[color=gray,very thin,fill=lightgray] ($(3,{3/sqrt(3)})$) circle (0.1);
+\end{tikzpicture}
+\end{center}
+
+Magiked brooms are rather finicky however, and unlike Grendel won't work
+in too tight a space. So, \textbf{can you figure out the area of the small
+space between the three cauldrons}? If it helps, the area of a circle is
+\(\pi r^2\) where \(r\) is the radius of the circle, and the area of
+a triangle is \(\frac{1}{2}bh\) where \(b\) is the length of its base
+and \(h\) is the height of the triangle measured perpendicularly to the base.
+
+
+% seven cauldron image
+% \begin{center}
+% \begin{tikzpicture}[x=0.2in,y=0.2in]
+%   \draw[color=gray,very thin,fill=lightgray] (0,0) circle (3);
+%   \draw[color=gray,very thin,fill=lightgray] (6,0) circle (3);
+%   \draw[color=gray,very thin,fill=lightgray] (-6,0) circle (3);
+%   \draw[color=gray,very thin,fill=lightgray] ($(3,{3*sqrt(3)})$) circle (3);
+%   \draw[color=gray,very thin,fill=lightgray] ($(-3,{3*sqrt(3)})$) circle (3);
+%   \draw[color=gray,very thin,fill=lightgray] ($(3,{-3*sqrt(3)})$) circle (3);
+%   \draw[color=gray,very thin,fill=lightgray] ($(-3,{-3*sqrt(3)})$) circle (3);
+%   \draw (0,0) -- ($(3,{3/sqrt(3)})$) -- (3,0) -- (0,0);
+%   \node at (1.7,-0.4) {\tiny 3};
+%   \node at (1.6,1.4) {\tiny \(2\sqrt{3}\)};
+%   \node at (3.3,0.7) {\tiny \(\sqrt{3}\)};
+%   \draw[color=gray,very thin,fill=lightgray] ($(3,{3/sqrt(3)})$) circle (0.1);
+%   \draw[color=gray,very thin,fill=lightgray] ($(3,{-3/sqrt(3)})$) circle (0.1);
+%   \draw[color=gray,very thin,fill=lightgray] ($(-3,{3/sqrt(3)})$) circle (0.1);
+%   \draw[color=gray,very thin,fill=lightgray] ($(-3,{-3/sqrt(3)})$) circle (0.1);
+%   \draw[color=gray,very thin,fill=lightgray] ($(0,{2*sqrt(3)})$) circle (0.1);
+%   \draw[color=gray,very thin,fill=lightgray] ($(0,{-2*sqrt(3)})$) circle (0.1);
+% \end{tikzpicture}
+% \end{center}
