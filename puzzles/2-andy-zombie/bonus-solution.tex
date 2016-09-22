@@ -3,13 +3,38 @@
 
 \phWorksheet{Solution - Bonus Puzzle 2}
 
+The Count is offering up what mathematicians call a
+``harmonic series'' of meat pies:
 
+\[
+  \sum_{i=17}^\infty \frac{1}{i}
+=
+  \frac{1}{17}+\frac{1}{18}+\frac{1}{19}+\dots
+\]
 
-% \begin{exChallengeSol}
-This is a well known series called a geometric series. If $| r | < 1$, then $\sum_{n=1}^{\infty} ar^{n-1}=\frac{a}{1-r}$. In particular, if $a=\frac{1}{x}$ and $r=\frac{1}{x}$, then $\sum_{n=1}^{\infty} ar^{n-1}=\sum_{n=1}^{\infty} (\frac{1}{x})(\frac{1}{x})^{n-1}=\frac{\frac{1}{x}}{1-\frac{1}{x}}=\frac{1}{x-1}$.
+Actually, unlike in the Main Puzzle,
+this infinte sum is just that: infinite! Here's a nice way to see that
+this sum cannot be finite.
 
-We expect students to plug in the first few terms of several different series, and take an educated guess for the solution. Try x=6,7,and 8!
+\[
+  \begin{array}{rl}
+  \sum_{i=17}^\infty \frac{1}{i} &
+  =
+  (\frac{1}{17}+\dots+\frac{1}{32})+(\frac{1}{33}+\dots+\frac{1}{64})+\dots
+  \\ &
+  \geq
+  (\frac{1}{32}+\dots+\frac{1}{32})+(\frac{1}{64}+\dots+\frac{1}{64})+\dots
+  \\ &
+  =
+  \frac{16}{32}+\frac{32}{64}+\dots
+  \\ &
+  =
+  \frac{1}{2}+\frac{1}{2}+\dots
+  \\ &
+  =
+  \infty
+\end{array}
+\]
 
-
-
-% \end{exChallengeSol}
+So, it might take a while, but Zom has at least \(100\) pies ahead of her
+to enjoy.
