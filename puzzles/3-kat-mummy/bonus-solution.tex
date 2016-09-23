@@ -3,11 +3,11 @@
 
 \phWorksheet{Solution - Bonus Puzzle 3}
 
-The answer is \(7\) (of course, the proof that \(8\) is impossible is
+The answer is \(7\) (although, the proof that \(8\) is impossible is
 non-trivial). Here's one such embedding:
 
 \begin{center}
-  \begin{tikzpicture}
+  \begin{tikzpicture}[x=1in,y=0.3in]
     \draw[thick] (0,0) rectangle (6,6);
     \draw[color=gray,thin] (0,0) -- +(2,6);
     \draw[color=gray,thin] (2,0) -- +(2,6);
@@ -22,5 +22,11 @@ non-trivial). Here's one such embedding:
     \node[draw,circle,fill=white] at (6,0) {\bf 7};
     \node[draw,circle,fill=white] at (0,6) {\bf 7};
     \node[draw,circle,fill=white] at (6,6) {\bf 7};
+    \node[draw,circle,fill=white] at ($(6/7,18/7)$) {\bf 1};
+    \node[draw,circle,fill=white] at ($(12/7,36/7)$) {\bf 2};
+    \node[draw,circle,fill=white] at ($(18/7,12/7)$) {\bf 3};
+    \node[draw,circle,fill=white] at ($(24/7,30/7)$) {\bf 4};
+    \node[draw,circle,fill=white] at ($(30/7,6/7)$) {\bf 5};
+    \node[draw,circle,fill=white] at ($(36/7,24/7)$) {\bf 6};
   \end{tikzpicture}
 \end{center}
