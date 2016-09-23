@@ -3,10 +3,18 @@
 
 \phWorksheet{Solution - Main Puzzle 4}
 
-This problem is essentially the degree-sum formula for graph theory. The degree of a building is the number of roads which lead to it. Adding up the degrees of every building will actually count the number of road twice. Why? Every road leads to exactly two buildings, meaning every road contributes exactly 2 to the sum of degrees.
+This problem is equivalent to the finding degree-sum formula in graph theory.
 
-With this in mind we see Plan A has 17 roads, so the sum of degrees of every building is 34 meaning it will cost 3400 dragon teeth to construct Plan A.
+Rather than counting how many roads go into each building, and calculating
+each buliding's cost, it's much easier to simply count the total number of
+roads. Then, since each road leads into two buildings, we may multiply this
+number by two to calculate the total number of roads entering all buildings.
 
-Plan B has 9 roads, so 18 is the sum of degrees meaning it will cost 1800 dragon teeth.
+In particular, Batty Bourough has \(17\) roads, and therefore \(34\) road-ends.
+Since each building costs \(100\) teeth for each road end leading to it,
+the total cost to renovate Batty Bourough is \(3400\) teeth.
 
-Plan C has 75 roads, so 150 is the degree-sum meaning it will cost 15,000 dragon teeth.
+As for Transylvania, we can ignore the total number of buildings, and use
+the same process: \(73\) roads multiplied by \(2\)
+equals \(146\) road-ends, making
+the total cost to renovate Transylvania \(146\times 50=7300\) teeth.

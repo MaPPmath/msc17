@@ -21,6 +21,47 @@
 % Page formatting
 \RequirePackage[margin=0.8in]{geometry}
 
+
+% Tikz
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+
+% arc through point
+% http://tex.stackexchange.com/a/132184
+\tikzset{
+  @arc through/.style 2 args={
+    to path={
+      \pgfextra
+        \pgfextract@process\pgf@tostart{\tikz@scan@one@point\pgfutil@firstofone(\tikztostart)\relax}%
+        \pgfextract@process\pgf@tothrough{\tikz@scan@one@point\pgfutil@firstofone#1}%
+        \pgfextract@process\pgf@totarget{\tikz@scan@one@point\pgfutil@firstofone(\tikztotarget)\relax}%
+        \pgfextract@process\pgf@topointMidA{\pgfpointlineattime{.5}{\pgf@tostart}{\pgf@tothrough}}%
+        \pgfextract@process\pgf@topointMidB{\pgfpointlineattime{.5}{\pgf@totarget}{\pgf@tothrough}}%
+        \pgfextract@process\pgf@tocenter{%
+          \pgfpointintersectionoflines{\pgf@topointMidA}
+            {\pgfmathrotatepointaround{\pgf@tothrough}{\pgf@topointMidA}{90}}
+            {\pgf@topointMidB}{\pgfmathrotatepointaround{\pgf@tothrough}{\pgf@topointMidB}{90}}}%
+        \pgfcoordinate{arc through center}{\pgf@tocenter}%
+        \pgfpointdiff{\pgf@tocenter}{\pgf@tostart}%
+        \pgfmathveclen@{\pgfmath@tonumber\pgf@x}{\pgfmath@tonumber\pgf@y}%
+        \edef\pgf@toradius{\pgfmathresult pt}
+        \pgfmathanglebetweenpoints{\pgf@tocenter}{\pgf@tostart}%
+        \let\pgf@tostartangle\pgfmathresult
+        \pgfmathanglebetweenpoints{\pgf@tocenter}{\pgf@totarget}%
+        \let\pgf@toendangle\pgfmathresult
+        \ifdim\pgf@tostartangle pt>\pgf@toendangle pt\relax
+          \pgfmathsetmacro\pgf@tostartangle{\pgf@tostartangle-360}%
+        \fi
+        #2%
+          \pgfmathsetmacro\pgf@toendangle{\pgf@toendangle-360}%
+        \fi
+      \endpgfextra
+      arc [radius=+\pgf@toradius, start angle=\pgf@tostartangle, end angle=\pgf@toendangle] \tikztonodes
+    }},
+  arc through ccw/.style={@arc through={#1}{\iffalse}},
+  arc through cw/.style={@arc through={#1}{\iftrue}},
+}
+
 % Space out paragraphs
 \setlength{\parskip}{6pt plus1pt minus1pt}
 
