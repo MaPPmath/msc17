@@ -2,14 +2,24 @@
 
 \phWorksheet{Solution - Main Puzzle 3}
 
-Hints
-\begin{itemize}
-\item[*] Help the students to try drawing four of the symbols on a piece of paper in such a way that none of the lines cross. Once they've done that, see if they can draw the same picture on the inner tube, but have one of the lines wrap around the inside or back of the inner tube.
-\end{itemize}
+This problem is equivalent to asking one to embed a complete graph \(K_5\)
+with 5 vertices onto the torus.
 
-Solution
+A solution can be drawn on a two-dimensional rectangle where points
+on opposite sides are identifed (taped) together.
 
-This problem is equivalent to asking one to embed a complete graph on 5 vertices ($K_5$) on the torus (or donut). A solution can be drawn on a two-dimensional rectangle where the four corners are understood to represent the same point and the sides across from each other can be wrapped around and pasted together to form the torus. There are multiple solutions to this problem, one is included here. In the picture solution below, the orange and green edges wrap around the inside or ``back'' of the torus respectively.
+There are multiple solutions to this problem; here's one as an example.
 
-
-    \includegraphics[width=\textwidth]{assets/kat/sol1}
+\begin{center}
+\begin{tikzpicture}[x=1in,y=0.3in]\bf\Large
+  \draw[thick] (0,0) rectangle (4,4);
+  \draw[color=gray,thin] (0,2) -- (4,2);
+  \draw[color=gray,thin] (2,0) -- (2,4);
+  \draw[color=gray,thin] (1,2) -- (2,1) -- (3,2) -- (2,3) -- (1,2);
+  \node at (2,3) {M};
+  \node at (1,2) {U};
+  \node at (2,2) {M};
+  \node at (3,2) {M};
+  \node at (2,1) {Y};
+\end{tikzpicture}
+\end{center}
