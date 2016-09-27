@@ -3,21 +3,45 @@
 
 \phWorksheet{Solution - Bonus Puzzle 5}
 
-Hints:
+% Hints:
+% \begin{itemize}
+% \item[*] Try ruling out certain cards. From the first puzzle, we know that the suit is either Cats or Pumpkins. If Ru is able to figure out which card Flo chose only knowing the rank and two choices for the suit, what cards can't be possibilities?
+% \item[*] Another approach could be guess and check: pick a card and then go back through Vi and Ru's conversation. See if all their statements are true, assuming that Flo's card is the same one you picked.
+% \end{itemize}
+%
+%
+% Solution:
+%
+% The answer is the 4 of Pumpkins! Let's see how to get there.\\
+%
+% We know from the first part of the puzzle that Flo's card is either Cats or Pumpkins.
+%
+% The next clue we're given is that Ru (who was told the rank) didn't know what card was chosen, but now that she knows the suit isn't Bats or Candy Corn, she knows what card Flo chose. This tells us that the card cannot have rank 2 since both of the remaining suits (Cats and Pumpkins) have a 2. If the rank Ru was given was a 2, then she would not be able to figure out Flo's card with only the information that the suit is Cats or Pumpkins.
+%
+% So, from the first two clues, we know that the card is either the 4 of Pumpkins, Ace of Cats, or 5 of Cats.
+%
+% Lastly, from the third clue, we know that once the card has been narrowed down to three possibilities, Vi is able to figure out the card as well. Since Vi only knows the suit of the card that means the card has to be the 4 of Pumpkins! If Vi had been told that the suit was Cats instead, she would not know whether or not the card was the Ace or 5 of Cats.\\
+
+Myrtle's message told not just Goolia, but also Blinky that the suit must
+be one of these choices:
+
 \begin{itemize}
-\item[*] Try ruling out certain cards. From the first puzzle, we know that the suit is either Cats or Pumpkins. If Ru is able to figure out which card Flo chose only knowing the rank and two choices for the suit, what cards can't be possibilities?
-\item[*] Another approach could be guess and check: pick a card and then go back through Vi and Ru's conversation. See if all their statements are true, assuming that Flo's card is the same one you picked.
+  \item The \(2\) of Pumpkins
+  \item The \(4\) of Pumpkins
+  \item The Ace of Black Cats
+  \item The \(2\) of Black Cats
+  \item The \(5\) of Black Cats
 \end{itemize}
 
+Since this was enough information for Blinky to figure out the card, its
+rank cannot be repeated, ruling out the cards of rank \(2\):
 
-Solution:
+\begin{itemize}
+  \item The \(4\) of Pumpkins
+  \item The Ace of Black Cats
+  \item The \(5\) of Black Cats
+\end{itemize}
 
-The answer is the 4 of Pumpkins! Let's see how to get there.\\
-
-We know from the first part of the puzzle that Flo's card is either Cats or Pumpkins.
-
-The next clue we're given is that Ru (who was told the rank) didn't know what card was chosen, but now that she knows the suit isn't Bats or Candy Corn, she knows what card Flo chose. This tells us that the card cannot have rank 2 since both of the remaining suits (Cats and Pumpkins) have a 2. If the rank Ru was given was a 2, then she would not be able to figure out Flo's card with only the information that the suit is Cats or Pumpkins.
-
-So, from the first two clues, we know that the card is either the 4 of Pumpkins, Ace of Cats, or 5 of Cats.
-
-Lastly, from the third clue, we know that once the card has been narrowed down to three possibilities, Vi is able to figure out the card as well. Since Vi only knows the suit of the card that means the card has to be the 4 of Pumpkins! If Vi had been told that the suit was Cats instead, she would not know whether or not the card was the Ace or 5 of Cats.\\
+Since when Blinky telling Myrtle that he knew the card was enough information
+for her to deduce the card, that rules out the repeated Black Cat suit,
+leaving only the \(4\) of Pumpkins as a possibility.
