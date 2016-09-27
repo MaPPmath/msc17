@@ -3,18 +3,46 @@
 
 \phWorksheet{Bonus Puzzle 4}
 
-A ghost city will be built around the new addition to Transylvania and follows a few rules which make haunting easier. The rules are as follows:
+Count Calcula now has to face his scariest task yet: meeting
+with a certain Ms. Knope of the Transylvania Parks and Recreation office.
 
-1) Every space in Transylvania must have exactly one ghost building.
+According to city code, there must be exactly one park in each area
+of the city which may be walked to without entering a building or
+crossing a road. For example, if Batty Borough had the same code, the Count
+would need to build \(8\) parks:
 
-2) A ghost road is made if it joins two ghost buildings by crossing over a road in Transylvania.
 
-Below is the ghost city of Transylvania Plan B:
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=.7]{assets/josh/ghostplans}
-\end{figure}
+\begin{center}
+\begin{tikzpicture}[x=0.3in,y=0.2in]
+\phDrawBattyBorough{}
+\node at (-5,-1) {\large\bf 1};
+\node at (-6,3) {\large\bf 2};
+\node at (-3,3) {\large\bf 3};
+\node at (0,4) {\large\bf 4};
+\node at (3,3) {\large\bf 5};
+\node at (6,3) {\large\bf 6};
+\node at (5,-1) {\large\bf 7};
+\node at (0,-4) {\large\bf 8};
+\end{tikzpicture}
+\end{center}
 
-If Transylvania Plan D has 33 roads what is the cost of constructing the ghost city?
+Remember, Transylvania has \textbf{57 buildings} and \textbf{73 roads},
+and most importantly, no bridges (so roads cannot cross one another).
+Believe it or not, it's possible to predict for Ms. Knope how many parks
+should be in Transylvania. Can you figure out the pattern? (Here's a hint:
+try drawing some small towns and adding up the numbers of buildings, roads,
+and parks... do you see a pattern?)
 
-If the length of a space is the number of roads the space touches what is the sum of lengths of spaces in Plan D?
+\textbf{How many parks should there be in Transylvania?}
+
+\vspace{2em}
+
+\textbf{Mark your answer below.}
+
+\begin{itemize}
+  \item[\Huge\(\circ\)] \(11\)
+  \item[\Huge\(\circ\)] \(18\)
+  \item[\Huge\(\circ\)] \(27\)
+  \item[\Huge\(\circ\)] \(39\)
+  \item[\Huge\(\circ\)] \(56\)
+\end{itemize}

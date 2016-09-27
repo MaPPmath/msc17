@@ -3,4 +3,24 @@
 
 \phWorksheet{Solution - Bonus Puzzle 4}
 
-Cost: 6600 dragon teeth. Length-sum: 66
+The pattern is called \textbf{Euler's formula}: for any such map where roads
+cannot cross, \(B-R+P=2\), where \(B\) is the number of buildings,
+\(R\) is the number of roads, and \(P\) is the number of parks.
+
+You can see this in Batty Borough, where \(11-17+8=2\).
+
+\begin{center}
+\begin{tikzpicture}[x=0.3in,y=0.2in]
+\phDrawBattyBorough{}
+\node at (-5,-1) {\large\bf 1};
+\node at (-6,3) {\large\bf 2};
+\node at (-3,3) {\large\bf 3};
+\node at (0,4) {\large\bf 4};
+\node at (3,3) {\large\bf 5};
+\node at (6,3) {\large\bf 6};
+\node at (5,-1) {\large\bf 7};
+\node at (0,-4) {\large\bf 8};
+\end{tikzpicture}
+\end{center}
+
+So, in Transylvania, \(57-73+P=2\) solves to \(P=18\).
