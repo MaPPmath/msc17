@@ -1,0 +1,41 @@
+%!TEX root = ../../msc17-game-book.tex
+
+\phWorksheet{Solution - Main Puzzle 6}
+
+The solution is 1067B. Rather than converting back-and-forth between
+base-10, it's best to use simple factoring
+
+\begin{center}\small
+\[
+  \begin{array}{rcccccccccc}
+  BAD_{hex} & = &&& 0\times16^3 &+& 11\times16^2 &+& 10\times16^1 &+& 13\times16^0 \\
+  +FACE_{hex} & = &&& 15\times16^3 &+& 10\times16^2 &+& 12\times16^1 &+& 14\times16^0 \\\hline
+              &   &&& 15\times16^3 &+& 21\times16^2 &+& 22\times16^1 &+& 27\times16^0 \\
+              & = &&& 15\times16^3 &+& 16\times16^2+5\times16^2 &+& 16\times16^1+6\times16^1 &+& 16\times16^0+11\times16^0 \\
+              & = &&& 16\times16^3 &+& 6\times16^2 &+& 7\times16^1 &+& 11\times16^0 \\
+              & = & 1\times16^4 &+& 0\times16^3 &+& 6\times16^2 &+& 7\times16^1 &+& 11\times16^0 \\
+              & = & 1 && 0 && 6 && 7 &+& B_{hex} \\
+  \end{array}
+\]
+\end{center}
+
+This can be made even cleaner by using the traditional long addition algorithm
+with hexadecimal digits directly, noting:
+
+\[D_{hex}+E_{hex}=1B_{hex}\]
+\[1_{hex}+A_{hex}+C_{hex}=17_{hex}\]
+\[1_{hex}+B_{hex}+A_{hex}=16_{hex}\]
+\[1_{hex}+F_{hex}=10_{hex}\]
+
+
+
+\begin{center}\small
+\[
+  \begin{array}{ccccc}
+    & 1 & 1 & 1     \\
+    &   & B & A & D \\
+  + & F & A & C & E \\\hline
+  1 & 0 & 6 & 7 & B
+  \end{array}
+\]
+\end{center}

@@ -1,0 +1,50 @@
+%!TEX root = ../../msc17-game-book.tex
+
+\phChapterWorksheet{Basic Experimentation}{Main Puzzle 6}
+
+Dr. Frankenstein, between his his usual experiments,
+is often found working on creating new ways to represent numbers.
+
+\phCharacterQuote{Hmm... according to my tests, most numbers are expressed using
+a so-called base-10 or decimal system. Yes, yes! Look Igor! The number \(3047\)
+is simply a sum of powers of ten!! Hahahaha!}
+
+{\Large
+\[
+  \begin{array}{rcccccccc}
+  3047 & = & 3000 &+& 000 &+& 40 &+& 7 \\
+       & = & 3\times10^3 &+& 0\times10^2 &+& 4\times10^1 &+& 7\times10^0
+  \end{array}
+\]
+}
+
+Apparently, this has given him an idea for a new experiment.
+\phCharacterQuote{Hmmm, yesss! What if I... do I dare?! What if I let each
+digit represent a number between \(0\) and \(15\)?} His new creation, which the
+doctor has named both ``base-16'' and ``hexadecimal'', represents the numbers
+ten through fifteen as the digits \(A\) through \(F\):
+
+{\Large
+\[
+  \begin{array}{rcccccccc}
+  1C0F_{hex} & = & 1_{hex}\times16^3 &+& C_{hex}\times16^2 &+& 0_{hex}\times16^1 &+& F_{hex}\times16^0 \\
+             & = & 1\times16^3 &+& 12\times16^2 &+& 0\times16^1 &+& 15\times16^0 \\
+             & = & 1\times4096 &+& 12\times256 &+& 0\times16 &+& 15 \\
+             & = & 4096 &+& 3072 &+& 0 &+& 15 \\
+             & = & 7183\\
+  \end{array}
+\]
+}
+
+Word around the village has spread quickly about the doctor's numerical
+experimentation. This was facilitated by the accidental escape of another
+of his creations, a monster known affectionately by the doctor as
+\(BAD_{hex}+FACE_{hex}\).
+
+\phCharacterQuote{Ah, I'd love to recapture my creation, but it seems it will
+only respond to its five-digit hexadecimal serial code.
+I seem to recall that this code is related to his name \(BAD_{hex}+FACE_{hex}\).}
+
+Since Dr. Frankenstein's memory is not what it used to be, perhaps you can
+help him out. \textbf{What is the monster's hexadecimal serial number, obtained
+by calculating \(BAD_{hex}+FACE_{hex}\)?}
